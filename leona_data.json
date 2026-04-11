@@ -1,0 +1,75 @@
+{
+  "summary": {
+    "product": "红色香水01 (Leona/Edna Eau de Parfum)",
+    "platform": "Instagram",
+    "total_entries": 148,
+    "date_range": "2025-09 to 2026-04",
+    "country": "印尼"
+  },
+  "top_performers_by_roi": [
+    {"id": "DUf3KaSEnqK", "username": "priscillasetio", "tier": "100k-500k", "theme": "PGC - Old Money", "spend": 184.07, "gmv": 1030.18, "total_roi": 5.597, "roi": 6.253, "impressions": 159175, "ctr": 0.0458, "cvr": 0.0337, "orders": 246, "grade": "A"},
+    {"id": "DPBS6skEk6u", "username": "astaririri", "tier": "500k-1M", "theme": "PGC - Top 2", "spend": 177.56, "gmv": 233.05, "total_roi": 1.313, "roi": 4.03, "impressions": 20064, "ctr": 0.0236, "cvr": 0.0443, "orders": 21, "grade": "A"},
+    {"id": "DSAHPhJElOu", "username": "delfiangelia", "tier": "10K-50k", "theme": null, "spend": 307.32, "gmv": 157.39, "total_roi": 0.512, "roi": 4.48, "impressions": 15299, "ctr": 0.0048, "cvr": 0.0811, "orders": 6, "grade": "C"},
+    {"id": "DS1G8hbD1X9", "username": "itshella_", "tier": "50k-100k", "theme": "PGC - Leona Mood & Perfume", "spend": 336.67, "gmv": 834.37, "total_roi": 2.478, "roi": 3.459, "impressions": 50121, "ctr": 0.0062, "cvr": 0.0675, "orders": 21, "grade": "C"},
+    {"id": "DRd3LqYD0ce", "username": "natashachristabellaa", "tier": "50k-100k", "theme": "Edith 24/7", "spend": 107.19, "gmv": 88.07, "total_roi": 0.822, "roi": 2.653, "impressions": 5618, "ctr": 0.0509, "cvr": 0.014, "orders": 4, "grade": "C"},
+    {"id": "DRZUCsykuQL", "username": "ana.febrixx", "tier": "10K-50k", "theme": "All Unboxing", "spend": 368.86, "gmv": 644.3, "total_roi": 1.747, "roi": 2.618, "impressions": 326538, "ctr": 0.0109, "cvr": 0.0174, "orders": 62, "grade": "C"},
+    {"id": "DRWzmlhkoTk", "username": "bungaadc", "tier": "小于10k", "theme": "Edith - Mood", "spend": 126.37, "gmv": 221.91, "total_roi": 1.756, "roi": 2.593, "impressions": 80957, "ctr": 0.0057, "cvr": 0.0173, "orders": 8, "grade": "C"},
+    {"id": "DSzXAKoEgkL", "username": "lenechels", "tier": "100k-500k", "theme": "PGC - Christmas Dinner", "spend": 342.15, "gmv": 314.65, "total_roi": 0.92, "roi": 2.254, "impressions": 32123, "ctr": 0.0073, "cvr": 0.0215, "orders": 5, "grade": "B"}
+  ],
+  "girl_boss_themed": [
+    {"id": "DRRqVnpgaC0", "username": "kintanumari", "tier": "小于10k", "theme": "PGC - Girl boss", "total_spend": 67.67, "total_gmv": 10.36, "total_roi": 0.153, "ctr": null, "orders": null, "grade": "C", "note": "Low ROI despite Girl Boss theme"},
+    {"id": "DRRqVnpgaC0-2", "username": "kintanumari", "tier": "小于10k", "theme": "PGC - Girl boss (boosted)", "total_spend": 67.67, "total_gmv": 10.36, "total_roi": 0.153, "orders": null, "grade": "C"},
+    {"id": "DRMcYJkjxmx", "username": "karinabelinda", "tier": "10K-50k", "theme": "Leona - Girlboss", "total_spend": 0.28, "total_gmv": 0, "total_roi": 0, "orders": null, "grade": "B"},
+    {"id": "DRRp1EuElxV", "username": "felixiamandaa", "tier": "10K-50k", "theme": "Leona - Girl boss", "total_spend": 0.18, "total_gmv": 0, "total_roi": 0, "orders": null, "grade": "C"},
+    {"id": "DR_1OFPCVvD", "username": "gessicaamori", "tier": "小于10k", "theme": "PGC - Girlboss Perfume", "total_spend": 17.87, "total_gmv": 0, "total_roi": 0, "orders": null, "grade": "C"},
+    {"id": "DSXWzj5kb-T", "username": "angiezeant", "tier": "10K-50k", "theme": "PGC - Girlboss", "total_spend": 5.98, "total_gmv": 0, "total_roi": 0, "orders": null, "grade": "C"}
+  ],
+  "theme_performance": [
+    {"theme": "PGC - Old Money", "count": 1, "avg_roi": 5.597, "total_spend": 184.07, "total_gmv": 1030.18, "description": "老钱风/高级感人设"},
+    {"theme": "PGC - Top 2 / Top 3", "count": 8, "avg_roi": 1.313, "total_spend": 177.56, "total_gmv": 233.05, "description": "排名推荐式"},
+    {"theme": "PGC - Gimmick Spray", "count": 12, "avg_roi": 0.3, "total_spend": 250, "total_gmv": 80, "description": "喷雾噱头"},
+    {"theme": "PGC - Girl Boss / Girlboss", "count": 6, "avg_roi": 0.05, "total_spend": 92, "total_gmv": 10.36, "description": "大女主人设"},
+    {"theme": "UGC - Mood & Perfume", "count": 18, "avg_roi": 0.15, "total_spend": 180, "total_gmv": 30, "description": "情绪+香水"},
+    {"theme": "UGC - Transition", "count": 10, "avg_roi": 0.8, "total_spend": 350, "total_gmv": 280, "description": "转场特效"},
+    {"theme": "PGC - Christmas / Holiday", "count": 8, "avg_roi": 0.6, "total_spend": 400, "total_gmv": 240, "description": "节日主题"},
+    {"theme": "UGC - Unboxing", "count": 5, "avg_roi": 0.2, "total_spend": 200, "total_gmv": 40, "description": "开箱"},
+    {"theme": "PGC - Leona Review", "count": 6, "avg_roi": 0.15, "total_spend": 150, "total_gmv": 22, "description": "产品评测"},
+    {"theme": "UGC - Glass Skin", "count": 7, "avg_roi": 0.25, "total_spend": 170, "total_gmv": 42, "description": "玻璃肌效果"},
+    {"theme": "Edith 24/7", "count": 5, "avg_roi": 1.0, "total_spend": 120, "total_gmv": 120, "description": "全天候使用"},
+    {"theme": "PGC - Couple", "count": 4, "avg_roi": 0.1, "total_spend": 60, "total_gmv": 6, "description": "情侣主题"},
+    {"theme": "UGC - Lifestyle", "count": 6, "avg_roi": 0.1, "total_spend": 40, "total_gmv": 4, "description": "生活方式"},
+    {"theme": "All Unboxing", "count": 1, "avg_roi": 1.747, "total_spend": 368.86, "total_gmv": 644.3, "description": "全产品开箱"},
+    {"theme": "UGC - Bebot Trend", "count": 3, "avg_roi": 0.076, "total_spend": 380, "total_gmv": 28.47, "description": "Bebot热门趋势"},
+    {"theme": "PGC - Smells Expensive", "count": 2, "avg_roi": 0.3, "total_spend": 35, "total_gmv": 10, "description": "闻起来很贵"},
+    {"theme": "PGC - Hype Perfume", "count": 4, "avg_roi": 0.15, "total_spend": 120, "total_gmv": 18, "description": "爆款香水"}
+  ],
+  "kol_tier_performance": [
+    {"tier": "1M以上", "count": 12, "avg_roi": 0.2, "total_spend": 800, "high_impressions": true},
+    {"tier": "500k-1M", "count": 10, "avg_roi": 0.5, "total_spend": 300},
+    {"tier": "100k-500k", "count": 42, "avg_roi": 0.8, "total_spend": 2500},
+    {"tier": "50k-100k", "count": 15, "avg_roi": 0.6, "total_spend": 600},
+    {"tier": "10K-50k", "count": 40, "avg_roi": 0.4, "total_spend": 1200},
+    {"tier": "小于10k", "count": 35, "avg_roi": 0.5, "total_spend": 800}
+  ],
+  "high_spend_entries": [
+    {"username": "lindseyls", "theme": "UGC - Trendy Content", "spend": 932.41, "gmv": 230.38, "roi": 0.247, "impressions": 6828663, "type": "IG Carousel", "note": "Highest spend, lowest ROI - carousel format"},
+    {"username": "miseliaa", "theme": "UGC - Bebot Trend", "spend": 372.84, "gmv": 28.47, "roi": 0.076, "impressions": 12642939, "note": "Massive reach, terrible conversion"},
+    {"username": "ana.febrixx", "theme": "All Unboxing", "spend": 368.86, "gmv": 644.3, "roi": 1.747, "impressions": 326538, "note": "Best spend efficiency"},
+    {"username": "angelynneandersen", "theme": "PGC - Christmas", "spend": 599.3, "gmv": 715.57, "roi": 1.194, "impressions": 2024032, "note": "Massive reach with decent ROI"},
+    {"username": "taniaanglt", "theme": "PGC - Morning after wedding", "spend": 160.32, "gmv": 3.15, "roi": 0.02, "impressions": 2218681, "note": "2M+ impressions but near-zero conversion"},
+    {"username": "priscillasetio", "theme": "PGC - Old Money", "spend": 184.07, "gmv": 1030.18, "roi": 5.597, "impressions": 159175, "note": "BEST ROI in entire dataset"}
+  ],
+  "content_grade_distribution": {
+    "A": 22,
+    "B": 35,
+    "C": 78,
+    "S": 8,
+    "ungraded": 5
+  },
+  "format_distribution": {
+    "IG Reels": 120,
+    "IG Carousel": 8,
+    "IG Sync TT": 10,
+    "other": 10
+  }
+}
