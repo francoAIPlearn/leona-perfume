@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Bodibreze Leona · IG内容投放分析 · 全量215条 · 2026</title>
+<style>
+:root{--red:#c0392b;--dark:#2c3e50;--purple:#8e44ad;--green:#27ae60;--blue:#2980b9;--orange:#e67e22;--gold:#f39c12;--light:#f8f9fa;--border:#ecf0f1;--text:#2c3e50;--muted:#7f8c8d}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--light);color:var(--text);line-height:1.6}
+.hero{background:linear-gradient(135deg,#1a1a2e 0%,#c0392b 55%,#8e44ad 100%);color:#fff;padding:60px 24px 40px;text-align:center}
+.hero h1{font-size:2.1rem;font-weight:900;text-shadow:0 2px 8px rgba(0,0,0,.4);letter-spacing:-.5px}
+.hero .sub{font-size:1rem;opacity:.8;margin:6px 0 3px;font-style:italic}
+.hero .meta{font-size:.76rem;opacity:.55;margin-top:5px}
+.notice{background:#fff8e1;border-left:4px solid #f39c12;padding:10px 20px;font-size:.79rem;color:#7d5a00;margin:0 20px 16px;border-radius:0 8px 8px 0}
+.kpi-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:12px;margin:-28px 20px 28px;position:relative;z-index:2}
+.kpi{background:#fff;border-radius:12px;padding:15px 10px;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.1)}
+.kpi-v{font-size:1.45rem;font-weight:800;color:var(--red)}
+.kpi-l{font-size:.68rem;color:var(--muted);margin-top:2px}
+.section{background:#fff;border-radius:14px;padding:26px;margin:20px auto;max-width:1180px;box-shadow:0 2px 8px rgba(0,0,0,.05)}
+.sec-title{font-size:1.25rem;font-weight:700;color:var(--dark);border-bottom:3px solid var(--red);padding-bottom:6px;display:inline-block;margin-bottom:16px}
+.sec-title .en{display:block;font-size:.7rem;font-weight:400;color:var(--muted);font-style:italic;border-bottom:none;margin-top:2px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.card{background:#fff;border-radius:10px;padding:16px;border:1px solid var(--border);box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.tbl{width:100%;border-collapse:collapse;font-size:.79rem}
+.tbl th{background:var(--dark);color:#fff;padding:9px 10px;text-align:left;font-weight:600}
+.tbl td{padding:7px 10px;border-bottom:1px solid var(--border)}
+.tbl tr:hover{background:#f5f6fa}
+.tbl tr:nth-child(even){background:#fafbfc}
+.bar-row{margin:7px 0}
+.bar-lbl{font-size:.76rem;color:var(--text);margin-bottom:2px;display:flex;justify-content:space-between;align-items:center}
+.bar-track{background:#ecf0f1;border-radius:6px;height:22px;overflow:hidden}
+.bar-fill{height:100%;border-radius:6px;display:flex;align-items:center;padding:0 8px;font-size:.7rem;font-weight:700;color:#fff;white-space:nowrap}
+.tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.7rem;font-weight:700;margin:1px}
+.tag-s{background:#8e44ad;color:#fff}.tag-a{background:#27ae60;color:#fff}
+.tag-b{background:#2980b9;color:#fff}.tag-c{background:#95a5a6;color:#fff}
+.mbox{display:inline-flex;flex-direction:column;align-items:center;padding:10px 14px;background:rgba(192,57,43,.07);border-radius:8px;margin:3px;text-align:center}
+.mbox .v{font-size:1.1rem;font-weight:800;color:var(--red)}.mbox .l{font-size:.64rem;color:var(--muted)}
+.hl-g{background:rgba(39,174,96,.08);border-left:4px solid var(--green);border-radius:0 8px 8px 0;padding:12px 16px;margin:8px 0}
+.hl-r{background:rgba(231,76,60,.07);border-left:4px solid var(--red);border-radius:0 8px 8px 0;padding:12px 16px;margin:8px 0}
+.hl-b{background:rgba(41,128,185,.07);border-left:4px solid var(--blue);border-radius:0 8px 8px 0;padding:12px 16px;margin:8px 0}
+.hl-y{background:rgba(243,156,18,.1);border-left:4px solid var(--gold);border-radius:0 8px 8px 0;padding:12px 16px;margin:8px 0}
+.vs-wrap{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center;margin:16px 0}
+.vs-mid{font-size:1.8rem;font-weight:900;color:var(--red);text-align:center}
+.carousel{position:relative;background:#1a1a2e;border-radius:12px;overflow:hidden;margin:10px 0}
+.c-track{display:flex;gap:12px;overflow-x:auto;padding:14px;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.c-track::-webkit-scrollbar{display:none}
+.c-slide{flex:0 0 175px;text-align:center}
+.c-slide img{width:175px;height:310px;object-fit:cover;border-radius:7px;box-shadow:0 2px 8px rgba(0,0,0,.5)}
+.c-cap{font-size:.64rem;color:#bbb;margin-top:5px;line-height:1.3}
+.cbtn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.9);border:none;width:28px;height:28px;border-radius:50%;font-size:1.1rem;cursor:pointer;z-index:5;box-shadow:0 1px 4px rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center}
+.cbtn-l{left:5px}.cbtn-r{right:5px}
+.tpl-card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.07);border:1px solid var(--border)}
+.tpl-hdr{color:#fff;padding:12px 16px}
+.tpl-body{padding:14px;font-size:.82rem;line-height:1.8}
+.post-link{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:16px;font-size:.72rem;font-weight:700;text-decoration:none;margin-top:8px}
+.bi{display:flex;flex-direction:column}
+.bi .zh{font-weight:600;font-size:.84rem}.bi .en{font-size:.69rem;color:var(--muted);font-style:italic}
+/* Language toggle */
+.lang-switcher{position:fixed;top:14px;right:16px;z-index:9999;display:flex;background:#fff;border-radius:20px;box-shadow:0 2px 10px rgba(0,0,0,.2);overflow:hidden;border:1px solid #ddd}
+.lang-btn{padding:6px 14px;font-size:.72rem;font-weight:700;cursor:pointer;border:none;background:transparent;color:#666;transition:all .2s}
+.lang-btn.active{background:var(--dark);color:#fff}
+body.zh-mode .en-block,body.zh-mode .sec-title .en,body.zh-mode .bi .en{display:none!important}
+body.en-mode .zh-wrap{display:none!important}
+body.en-mode .bi .zh{display:none!important}
+body.en-mode .sec-title{font-size:0!important;color:transparent!important;border-bottom:none!important;padding-bottom:0!important;margin-bottom:0!important}
+body.en-mode .sec-title .en{font-size:1.15rem!important;color:var(--dark)!important;font-style:normal!important;font-weight:700!important;display:inline-block!important;border-bottom:3px solid var(--red)!important;padding-bottom:6px!important;margin-bottom:16px!important}
+body.en-mode .en-block{display:block!important;font-style:normal!important;color:var(--text)!important;font-size:.84rem!important}
+body.en-mode em{font-style:normal}
+@media(max-width:720px){.grid2,.grid3{grid-template-columns:1fr}.vs-wrap{grid-template-columns:1fr}.kpi-bar{grid-template-columns:repeat(3,1fr)}.hero h1{font-size:1.4rem}}
+</style>
+</head>
+<body>
+
+<div class="lang-switcher">
+  <button class="lang-btn" id="btn-zh" onclick="setLang('zh')">中文</button>
+  <button class="lang-btn" id="btn-bi" onclick="setLang('bi')">双语</button>
+  <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+</div>
+
+<div class="hero">
+  <h1>Bodibreze Leona (红色香水01) · IG投放内容分析</h1>
+  <div class="sub">Instagram KOL Campaign Analysis · Full Dataset · 215 Active Materials</div>
+  <div class="meta">数据周期 2025 Q3 – 2026 Q1 · 平台 Instagram · 市场 Indonesia · 基于红色香水leona.csv全量解析</div>
+</div>
+
+<div style="padding:0 20px">
+<div class="notice">
+  <strong>数据说明：</strong>本报告基于 <strong>红色香水leona.csv 全量解析，215条有效投放记录（spend&gt;0）</strong>，口径为按素材汇总（每行=该素材全生命周期总花费）。ROI = GMV ÷ spend，经字段验证一致。多数主题 n=1，统计仅供方向参考。<br>
+  <span class="en-block"><em>Data: full parse of 红色香水leona.csv, 215 active materials (spend&gt;0). Each row represents a material's lifetime spend. ROI = GMV ÷ spend, field-verified. Most themes have n=1; treat as directional only.</em></span>
+</div>
+
+<div class="kpi-bar">
+  <div class="kpi"><div class="kpi-v">215</div><div class="kpi-l">有效投放 Active Materials</div></div>
+  <div class="kpi"><div class="kpi-v" style="color:var(--red)">$9,908</div><div class="kpi-l">总花费 Total Spend</div></div>
+  <div class="kpi"><div class="kpi-v" style="color:var(--orange)">$5,092</div><div class="kpi-l">总GMV Total GMV</div></div>
+  <div class="kpi"><div class="kpi-v" style="color:var(--red)">0.514</div><div class="kpi-l">整体ROI Overall ROI</div></div>
+  <div class="kpi"><div class="kpi-v" style="color:var(--green)">5.60</div><div class="kpi-l">最高ROI Best ROI</div></div>
+  <div class="kpi"><div class="kpi-v" style="color:var(--purple)">969</div><div class="kpi-l">总订单 Orders</div></div>
+  <div class="kpi"><div class="kpi-v">126.2M</div><div class="kpi-l">总展示 Impressions</div></div>
+</div>
+</div>
+
+<!-- ① 三维度诊断 -->
+<div class="section">
+  <h2 class="sec-title">一、三维度投放诊断<span class="en">Three-Dimension Diagnosis</span></h2>
+  <div class="grid3">
+    <div class="card" style="border-top:4px solid var(--blue)">
+      <div style="font-size:.8rem;font-weight:700;color:var(--blue);margin-bottom:10px">💰 成本维度 Cost<span class="en-block"><em>Cost Dimension</em></span></div>
+      <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px">
+        <div class="mbox" style="background:rgba(41,128,185,.08)"><span class="v" style="color:var(--blue)">$0.080</span><span class="l">均CPM Avg CPM</span></div>
+        <div class="mbox" style="background:rgba(41,128,185,.08)"><span class="v" style="color:var(--blue)">$0.437</span><span class="l">最高CPM Peak CPM</span></div>
+      </div>
+      <p style="font-size:.8rem;color:var(--muted)">CPM 最低的 Bebot Trend ($0.031) ROI 仅 0.08，CPM 最高的 Old Money ($0.437) ROI 达 5.60。价格贵不一定差——内容场景决定点击质量。
+      <br><span class="en-block"><em>Lowest CPM (Bebot, $0.031) → ROI 0.08; highest CPM (Old Money, $0.437) → ROI 5.60. Cost alone doesn't predict efficiency — content scene determines click quality.</em></span></p>
+    </div>
+    <div class="card" style="border-top:4px solid var(--purple)">
+      <div style="font-size:.8rem;font-weight:700;color:var(--purple);margin-bottom:10px">👁 吸引效果维度 Attraction<span class="en-block"><em>Attraction Dimension</em></span></div>
+      <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px">
+        <div class="mbox" style="background:rgba(142,68,173,.08)"><span class="v" style="color:var(--purple)">0.19%</span><span class="l">均CTR Avg CTR</span></div>
+        <div class="mbox" style="background:rgba(142,68,173,.08)"><span class="v" style="color:var(--purple)">126.2M</span><span class="l">总展示 Impressions</span></div>
+      </div>
+      <p style="font-size:.8rem;color:var(--muted)">均值 CTR 0.19%，Old Money CTR 1.78%（9倍于均值）。PGC内容的Hook质量、前3秒产品入镜，是拉开CTR差距的核心。
+      <br><span class="en-block"><em>Avg CTR 0.19%; Old Money hit 1.78% (9× average). The first 3 seconds and hook design separate high-CTR content from the pack.</em></span></p>
+    </div>
+    <div class="card" style="border-top:4px solid var(--green)">
+      <div style="font-size:.8rem;font-weight:700;color:var(--green);margin-bottom:10px">🛒 转化维度 Conversion<span class="en-block"><em>Conversion Dimension</em></span></div>
+      <div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:10px">
+        <div class="mbox" style="background:rgba(39,174,96,.08)"><span class="v" style="color:var(--green)">0.10%</span><span class="l">均CVR Avg CVR</span></div>
+        <div class="mbox" style="background:rgba(39,174,96,.08)"><span class="v" style="color:var(--green)">0.514</span><span class="l">整体ROI Overall</span></div>
+      </div>
+      <p style="font-size:.8rem;color:var(--muted)">整体 ROI 0.514，尚未回本。215 条素材中，前3条贡献了 51.1% GMV（$2,603/$5,092），仅占总花费 8.7%（$863/$9,908）。
+      <br><span class="en-block"><em>Overall ROI 0.514, below breakeven. Top 3 materials: 8.7% of spend → 51.1% of GMV. Concentration is the clearest lever available.</em></span></p>
+    </div>
+  </div>
+  <div class="hl-y" style="margin-top:14px">
+    <strong>🔑 核心矛盾<span class="en-block"><em> Core Paradox</em></span>：</strong>
+    前3条（@priscillasetio / @itshella_ / @ana.febrixx）花费 $863，产生 GMV $2,603；其余 212 条花费 $9,045，产生 GMV $2,489。
+    <br><span class="en-block"><em>Top 3 materials: $863 spend → $2,603 GMV (ROI 3.01). Remaining 212: $9,045 spend → $2,489 GMV (ROI 0.28). A striking concentration effect.</em></span>
+  </div>
+</div>
+
+<!-- ② Top 10 -->
+<div class="section">
+  <h2 class="sec-title">二、Top 10 高ROI素材<span class="en">Top 10 by ROI</span></h2>
+  <p style="font-size:.78rem;color:var(--muted);margin-bottom:14px">基于215条有效投放 · 按实际 GMV÷spend 排序 · 点击链接跳转原帖
+  <br><span class="en-block"><em>Ranked by actual GMV÷spend ROI from 215 active materials. Click links to view original posts.</em></span></p>
+  <div style="overflow-x:auto">
+  <table class="tbl">
+    <thead><tr><th>#</th><th>KOL</th><th>层级 Tier</th><th>评级 Grade</th><th>主题 Theme</th><th>花费 Spend</th><th>GMV</th><th>ROI</th><th>订单 Orders</th><th>CTR</th><th>CVR</th><th>原帖 Post</th></tr></thead>
+    <tbody>
+      <tr style="background:rgba(39,174,96,.1)">
+        <td><strong>1</strong></td><td><strong>@priscillasetio</strong></td><td>100k-500k</td><td><span class="tag tag-a">A</span></td><td>PGC - Old Money</td>
+        <td><strong>$184</strong></td><td><strong>$1,030</strong></td><td><strong style="color:var(--green);font-size:1.05rem">5.60</strong></td><td>247</td><td>1.78%</td><td>3.30%</td>
+        <td><a href="https://www.instagram.com/reel/DUf3KaSEnqK/" target="_blank" style="color:var(--blue);font-size:.72rem">🔗 查看</a></td>
+      </tr>
+      <tr>
+        <td>2</td><td><strong>@itshella_</strong></td><td>50k-100k</td><td><span class="tag tag-c">C</span></td><td>PGC - Leona Mood & Perfume</td>
+        <td>$305</td><td>$782</td><td><strong style="color:var(--green)">2.57</strong></td><td>154</td><td>0.28%</td><td>4.34%</td>
+        <td><a href="https://www.instagram.com/p/DS1G8hbD1X9/" target="_blank" style="color:var(--blue);font-size:.72rem">🔗 查看</a></td>
+      </tr>
+      <tr>
+        <td>3</td><td><strong>@ana.febrixx</strong></td><td>10K-50k</td><td><span class="tag tag-c">C</span></td><td>All Unboxing</td>
+        <td>$374</td><td>$791</td><td><strong style="color:var(--green)">2.12</strong></td><td>123</td><td>0.43%</td><td>1.66%</td>
+        <td><a href="https://www.instagram.com/reel/DRZUCsykuQL/" target="_blank" style="color:var(--blue);font-size:.72rem">🔗 查看</a></td>
+      </tr>
+      <tr>
+        <td>4</td><td><strong>@astaririri</strong></td><td>500k-1M</td><td><span class="tag tag-a">A</span></td><td>PGC - Top 2</td>
+        <td>$178</td><td>$233</td><td><strong>1.31</strong></td><td>30</td><td>0.41%</td><td>0.67%</td>
+        <td><a href="https://www.instagram.com/p/DPBS6skEk6u/" target="_blank" style="color:var(--blue);font-size:.72rem">🔗 查看</a></td>
+      </tr>
+      <tr>
+        <td>5</td><td><strong>@vaalenzhang</strong></td><td>小于10k</td><td><span class="tag tag-b">B</span></td><td>UGC GRWM Chalkboard</td>
+        <td>$68</td><td>$83</td><td><strong>1.22</strong></td><td>11</td><td>0.21%</td><td>1.06%</td>
+        <td><a href="https://www.instagram.com/reel/DVigL8QD4HV/" target="_blank" style="color:var(--blue);font-size:.72rem">🔗 查看</a></td>
+      </tr>
+      <tr>
+        <td>6</td><td><strong>@angelynneandersen</strong></td><td>100k-500k</td><td><span class="tag tag-b">B</span></td><td>PGC - Christmas</td>
+        <td>$635</td><td>$721</td><td><strong>1.14</strong></td><td>158</td><td>0.33%</td><td>0.97%</td>
+        <td><a href="https://www.instagram.com/p/DSpbOoykvH5/" target="_blank" style="color:var(--blue);font-size:.72rem">🔗 查看</a></td>
+      </tr>
+      <tr>
+        <td>7</td><td><strong>@bungaadc</strong></td><td>小于10k</td><td><span class="tag tag-c">C</span></td><td>Edith - Mood</td>
+        <td>$101</td><td>$109</td><td><strong>1.08</strong></td><td>21</td><td>0.22%</td><td>1.47%</td>
+        <td><a href="https://www.instagram.com/p/DRWzmlhkoTk/" target="_blank" style="color:var(--blue);font-size:.72rem">🔗 查看</a></td>
+      </tr>
+      <tr>
+        <td>8</td><td><strong>@lenechels</strong></td><td>100k-500k</td><td><span class="tag tag-b">B</span></td><td>PGC - Christmas Dinner</td>
+        <td>$342</td><td>$315</td><td><strong>0.92</strong></td><td>62</td><td>0.12%</td><td>1.85%</td>
+        <td><a href="https://www.instagram.com/p/DSzXAKoEgkL/" target="_blank" style="color:var(--blue);font-size:.72rem">🔗 查看</a></td>
+      </tr>
+      <tr>
+        <td>9</td><td><strong>@delfiangelia</strong></td><td>10K-50k</td><td><span class="tag tag-c">C</span></td><td>（无脚本标注）</td>
+        <td>$307</td><td>$157</td><td>0.51</td><td>23</td><td>0.23%</td><td>0.25%</td>
+        <td><a href="https://www.instagram.com/reel/DSAHPhJElOu/" target="_blank" style="color:var(--blue);font-size:.72rem">🔗 查看</a></td>
+      </tr>
+      <tr>
+        <td>10</td><td><strong>@addinashafira</strong></td><td>10K-50k</td><td><span class="tag tag-c">C</span></td><td>UGC - Lifestyle</td>
+        <td>$11</td><td>$10</td><td>0.93</td><td>1</td><td>0.52%</td><td>0.50%</td>
+        <td><a href="https://www.instagram.com/reel/DVLhKYyj1TM/" target="_blank" style="color:var(--blue);font-size:.72rem">🔗 查看</a></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="grid2" style="margin-top:14px">
+    <div class="hl-g">
+      <strong>成功共性<span class="en-block"><em> Success Patterns</em></span>：</strong>
+      <ul style="padding-left:16px;font-size:.81rem;margin-top:6px;line-height:1.8">
+        <li><span class="zh-wrap">Top 7 中有 5 条是 C 级——评级与 ROI 存在明显负相关</span><span class="en-block"> / 5 of top 7 are Grade C — grade inversely correlates with ROI</span></li>
+        <li><span class="zh-wrap">CVR 普遍 &gt;1%，是均值 0.10% 的 10×——内容说服力驱动转化</span><span class="en-block"> / CVR consistently &gt;1%, 10× the avg — content persuasiveness drives conversion</span></li>
+        <li><span class="zh-wrap">花费集中在 $100–$400，性价比最优区间</span><span class="en-block"> / Sweet spot spend: $100–$400 per material</span></li>
+        <li><span class="zh-wrap">PGC / 明确场景脚本内容占主导</span><span class="en-block"> / PGC and scene-driven scripts dominate</span></li>
+      </ul>
+    </div>
+    <div class="hl-r">
+      <strong>评级悖论<span class="en-block"><em> Grade Paradox</em></span>：</strong>
+      <div style="font-size:.81rem;margin-top:6px;line-height:1.8">
+        <span class="zh-wrap">S级 n=6，均ROI 0.202（最低）<br>A级 n=30，均ROI 1.177<br>B级 n=47，均ROI 0.446<br><strong style="color:var(--green)">C级 n=131，均ROI 0.469</strong><br>平台评级不能作为主要投放依据。</span>
+        <span class="en-block"><em>S (n=6): avg ROI 0.20 — lowest. A (n=30): 1.18. B (n=47): 0.45. C (n=131): 0.47. Platform grade does not predict conversion ROI reliably.</em></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ③ KOL 层级 -->
+<div class="section">
+  <h2 class="sec-title">三、KOL层级效率分析<span class="en">KOL Tier Efficiency</span></h2>
+  <div class="grid2">
+    <div class="card">
+      <h3 style="font-size:.9rem;margin-bottom:14px">层级ROI对比<span class="en-block"><em> ROI by Tier</em></span></h3>
+      <div class="bar-row">
+        <div class="bar-lbl"><span>50k-100k (n=17)</span><span style="color:var(--green);font-weight:700">ROI 1.247 ← 最佳</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%;background:linear-gradient(90deg,#27ae60,#2ecc71)">$647 spend</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-lbl"><span>100k-500k (n=47)</span><span>ROI 0.646</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:52%;background:linear-gradient(90deg,#f39c12,#e67e22)">$3,776 spend</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-lbl"><span>500k-1M (n=10)</span><span>ROI 0.480</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:38%;background:linear-gradient(90deg,#8e44ad,#9b59b6)">$530 spend</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-lbl"><span>10K-50k (n=61)</span><span>ROI 0.427</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:34%;background:linear-gradient(90deg,#2980b9,#3498db)">$2,560 spend</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-lbl"><span>1M以上 (n=12)</span><span style="color:var(--red)">ROI 0.240</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:19%;background:#e74c3c">$694 spend</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-lbl"><span>小于10k (n=66)</span><span style="color:var(--red)">ROI 0.196</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:16%;background:linear-gradient(90deg,#95a5a6,#bdc3c7)">$1,691 spend</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <h3 style="font-size:.9rem;margin-bottom:12px">层级 × 评级矩阵 (ROI)<span class="en-block"><em> Tier × Grade Matrix (ROI)</em></span></h3>
+      <table class="tbl" style="font-size:.73rem">
+        <tr><th>层级 Tier</th><th>S</th><th>A</th><th>B</th><th>C</th></tr>
+        <tr><td>小于10k</td><td style="color:#999">—</td><td>0.216</td><td>0.520</td><td>0.160</td></tr>
+        <tr><td>10K-50k</td><td style="color:#999">—</td><td>0.000</td><td>0.030</td><td>0.477</td></tr>
+        <tr><td>50k-100k</td><td style="color:#999">—</td><td style="color:#999">—</td><td>0.069</td><td><strong style="color:var(--green)">1.865</strong></td></tr>
+        <tr><td>100k-500k</td><td style="color:var(--red)">0.081</td><td><strong style="color:var(--green)">2.540</strong></td><td>0.518</td><td>0.000</td></tr>
+        <tr><td>500k-1M</td><td style="color:#999">—</td><td>0.549</td><td>0.096</td><td>0.062</td></tr>
+        <tr><td>1M以上</td><td style="color:var(--red)">0.318</td><td>0.058</td><td style="color:#999">—</td><td style="color:#999">—</td></tr>
+      </table>
+      <div style="font-size:.72rem;color:var(--muted);margin-top:6px">值=实际 GMV/spend · 空格=无该组合数据
+      <br><span class="en-block"><em>Values = actual GMV÷spend ROI per cell · — = no data</em></span></div>
+      <div class="hl-r" style="margin-top:10px;padding:8px 12px">
+        <span style="font-size:.79rem"><span class="zh-wrap">100k-500k A级 ROI 2.540 是最优组合；1M+大号全部在 S/A 级却 ROI&lt;0.32；小于10k 占全量 30%条数但 ROI 仅 0.196。</span><span class="en-block"><em>100k-500k Grade A (ROI 2.54) is the best cell. All 1M+ KOLs are graded S/A but ROI&lt;0.32. Sub-10k accounts for 30% of volume but only 0.196 ROI.</em></span></span>
+      </div>
+    </div>
+  </div>
+  <div class="grid2" style="margin-top:14px">
+    <div class="hl-g">
+      <strong>推荐层级<span class="en-block"><em> Recommended Tiers</em></span>：</strong>
+      <div style="font-size:.8rem;margin-top:6px;line-height:1.8">
+        <span class="zh-wrap"><strong>首选：100k-500k A级</strong>（ROI 2.54，含Old Money标杆）<br><strong>性价比最高：50k-100k C级</strong>（ROI 1.87，花费仅$647）<br>这两个组合是当前数据中最稳定的高ROI区间。</span>
+        <span class="en-block"><em><strong>Best cell: 100k-500k Grade A</strong> (ROI 2.54, includes Old Money benchmark)<br><strong>Best value: 50k-100k Grade C</strong> (ROI 1.87, only $647 spend)<br>These two cells represent the most consistent high-ROI segments in this dataset.</em></span>
+      </div>
+    </div>
+    <div class="hl-r">
+      <strong>需要关注的层级<span class="en-block"><em> Tiers Worth Reviewing</em></span>：</strong>
+      <div style="font-size:.8rem;margin-top:6px;line-height:1.8">
+        <span class="zh-wrap"><strong>1M+：</strong>花费$694，ROI 0.240——大号评级高（S/A）但转化偏低，曝光价值高于转化价值。<br><strong>小于10k：</strong>n=66条占最多，ROI 0.196，尤其做人设内容时说服力有限。</span>
+        <span class="en-block"><em><strong>1M+ KOLs:</strong> $694 spend, ROI 0.24. High grades (S/A) but low conversion — more brand awareness value than purchase driver.<br><strong>Sub-10k:</strong> 66 entries (most), ROI 0.196. Limited aspirational credibility for persona-driven content.</em></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ④ 主题排行 -->
+<div class="section">
+  <h2 class="sec-title">四、主题投放效果排行<span class="en">Theme Performance Ranking</span></h2>
+  <p style="font-size:.76rem;color:var(--muted);margin-bottom:14px">注：多数主题 n=1，数据仅供方向参考，不宜过度解读。高花费主题见右侧。
+  <br><span class="en-block"><em>Most themes have n=1. Treat as directional only. High-spend themes on the right.</em></span></p>
+  <div class="grid2">
+    <div>
+      <div style="font-weight:700;color:var(--green);margin-bottom:10px;font-size:.84rem">✅ 高ROI主题（花费≥$20）<span class="en-block"><em> High-ROI Themes (spend≥$20)</em></span></div>
+      <div class="bar-row">
+        <div class="bar-lbl"><div class="bi"><span class="zh">PGC - Old Money · n=1</span><span class="en">Old money lifestyle</span></div><span style="color:var(--green);font-weight:700">ROI 5.60</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--green)">$184 → $1,030</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-lbl"><div class="bi"><span class="zh">PGC - Leona Mood & Perfume · n=1</span><span class="en">Mood-perfume scene</span></div><span style="color:var(--green);font-weight:700">ROI 2.57</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:46%;background:var(--green)">$305 → $782</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-lbl"><div class="bi"><span class="zh">All Unboxing · n=1</span><span class="en">Full product unboxing</span></div><span style="color:var(--green);font-weight:700">ROI 2.12</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:38%;background:var(--green)">$374 → $791</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-lbl"><div class="bi"><span class="zh">PGC - Top 2 · n=1</span><span class="en">Ranked recommendation</span></div><span style="font-weight:700">ROI 1.31</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:23%;background:var(--blue)">$178 → $233</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-lbl"><div class="bi"><span class="zh">PGC - Christmas · n=3</span><span class="en">Holiday content</span></div><span style="font-weight:700">ROI 1.11</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:20%;background:var(--blue)">$651 → $721</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-lbl"><div class="bi"><span class="zh">Edith - Mood · n=1</span><span class="en">Mood scene</span></div><span style="font-weight:700">ROI 1.08</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:19%;background:var(--blue)">$101 → $109</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-lbl"><div class="bi"><span class="zh">UGC GRWM Chalkboard · n=5</span><span class="en">GRWM chalkboard</span></div><span style="font-weight:700">ROI 0.60</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:11%;background:var(--blue)">$142 → $85</div></div>
+      </div>
+    </div>
+    <div>
+      <div style="font-weight:700;color:var(--red);margin-bottom:10px;font-size:.84rem">⚠️ 高花费待优化主题（花费≥$100）<span class="en-block"><em> High-Spend Themes Needing Review</em></span></div>
+      <div class="bar-row">
+        <div class="bar-lbl"><div class="bi"><span class="zh">UGC - Trendy Content · n=3</span><span class="en">Trending format</span></div><span style="color:var(--red);font-weight:700">ROI 0.280</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%;background:var(--red)">$1,050 — 最高花费</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-lbl"><div class="bi"><span class="zh">PGC - Leona · n=18</span><span class="en">Generic Leona</span></div><span style="color:var(--red);font-weight:700">ROI 0.047</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:48%;background:var(--red)">$508 — 条数最多却ROI最低</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-lbl"><div class="bi"><span class="zh">UGC - Transition · n=9</span><span class="en">Transition effects</span></div><span style="color:var(--red);font-weight:700">ROI 0.125</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:47%;background:#e67e22">$496</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-lbl"><div class="bi"><span class="zh">UGC - Bebot Trend · n=1</span><span class="en">Bebot trend</span></div><span style="color:var(--red);font-weight:700">ROI 0.082</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:44%;background:var(--red)">$466</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-lbl"><div class="bi"><span class="zh">（未分类）· n=9</span><span class="en">No theme label</span></div><span style="color:var(--red);font-weight:700">ROI 0.278</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:57%;background:#e67e22">$602 — 无脚本标注</div></div>
+      </div>
+      <div class="hl-r" style="margin-top:10px;padding:8px 12px">
+        <span style="font-size:.78rem"><span class="zh-wrap"><strong>PGC - Leona（n=18）花费$508，ROI 0.047</strong>：是花费量第四大的主题，但ROI是所有高花费主题中最低的。说明"通用Leona脚本"本身缺乏差异化。</span><span class="en-block"><em><strong>PGC - Leona (n=18): $508 spend, ROI 0.047</strong> — the 4th-highest spend group but lowest ROI. Generic "Leona" scripts lack differentiation and convert poorly.</em></span></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ⑤ Girl Boss 人设 -->
+<div class="section">
+  <h2 class="sec-title">五、Girl Boss人设验证<span class="en">Girl Boss Persona Analysis</span></h2>
+  <p style="font-size:.78rem;color:var(--muted);margin-bottom:14px">关键词匹配范围：girl boss / girlboss / old money / old money perfume / girlboss perfume · 共识别9条
+  <br><span class="en-block"><em>Keyword matching: girl boss / girlboss / old money / old money perfume / girlboss perfume · 9 entries identified</em></span></p>
+
+  <div class="vs-wrap">
+    <div class="card" style="border:2px solid var(--red);text-align:center">
+      <div style="font-size:.74rem;color:var(--red);font-weight:700;margin-bottom:6px">GIRL BOSS 口号式<span class="en-block"><em> Label-First Approach</em></span></div>
+      <div style="font-size:2rem;font-weight:900;color:var(--red)">ROI ≈ 0</div>
+      <div style="font-size:.76rem;margin-top:8px;text-align:left;padding:0 6px;line-height:1.7">
+        <div>@kintanumari: $68 → ROI 0.15</div>
+        <div>@gessicaamori: $18 → ROI 0</div>
+        <div>@angiezeant: $6 → ROI 0</div>
+        <div>@jourimanzky_: $0.29 → ROI 0</div>
+        <div>@karinabelinda: $0.28 → ROI 0</div>
+        <div>@felixiamandaa: $0.18 → ROI 0</div>
+      </div>
+      <div style="margin-top:8px;font-size:.7rem;color:var(--muted)">6条"Girl Boss"标签素材
+      <br><span class="en-block"><em>6 "Girl Boss" labeled materials</em></span></div>
+    </div>
+    <div class="vs-mid">VS</div>
+    <div class="card" style="border:2px solid var(--green);text-align:center">
+      <div style="font-size:.74rem;color:var(--green);font-weight:700;margin-bottom:6px">OLD MONEY 场景式<span class="en-block"><em> Scene-First Approach</em></span></div>
+      <div style="font-size:2rem;font-weight:900;color:var(--green)">ROI 5.60</div>
+      <div style="font-size:.76rem;margin-top:8px;text-align:left;padding:0 6px;line-height:1.7">
+        <div>@priscillasetio: $184 → ROI 5.60 ✅</div>
+        <div style="color:var(--muted)">@alysawd: $5 → ROI 0 (Old Money Perf.)</div>
+        <div style="color:var(--muted)">@tiarashafiya: $3 → ROI 0 (Old Money Perf.)</div>
+      </div>
+      <div style="margin-top:8px;font-size:.7rem;color:var(--muted)">3条 Old Money 主题，仅1条成功
+      <br><span class="en-block"><em>3 Old Money materials, 1 success</em></span></div>
+    </div>
+  </div>
+
+  <div class="hl-y" style="margin-bottom:18px">
+    <strong>🔑 关键洞察：Girl Boss ≠ 喊口号，而是"活出来"<span class="en-block"><em> Key Insight: Girl Boss = Performed, Not Declared</em></span></strong>
+    <p style="font-size:.84rem;margin-top:6px;line-height:1.7">
+      <span class="zh-wrap">直接标注"Girl Boss"的内容 ROI 接近零，但间接呈现 Girl Boss 气质的 Old Money 风内容 ROI 达 5.60。消费者不想被告知"你是 Girl Boss"，而想看到"Girl Boss 的生活是什么样"——具体的场景（穿搭、出行、社交）比抽象的标签更有说服力。</span>
+      <span class="en-block"><em>Content labeled "Girl Boss" delivers near-zero ROI. Old Money scene-driven content delivers ROI 5.60. Consumers don't want to be told they're a Girl Boss — they want to see what Girl Boss living looks like. Concrete scenes (styling, going out, social moments) beat abstract labels.</em></span>
+    </p>
+  </div>
+
+  <!-- Benchmark Carousel -->
+  <div style="margin-bottom:22px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px">
+      <div><span style="background:var(--green);color:#fff;padding:3px 10px;border-radius:10px;font-size:.72rem;font-weight:700">BENCHMARK · 标杆</span>
+      <strong style="margin-left:8px">@priscillasetio · PGC - Old Money · ROI 5.60</strong></div>
+      <div style="font-size:.76rem;color:var(--muted)">100k-500k · A级 · 花费$184 · GMV $1,030 · 247单
+      <br><a href="https://www.instagram.com/reel/DUf3KaSEnqK/" target="_blank" style="color:var(--blue)">🔗 instagram.com/reel/DUf3KaSEnqK</a></div>
+    </div>
+    <div class="carousel" id="c1">
+      <button class="cbtn cbtn-l" onclick="sc('c1',-1)">‹</button>
+      <div class="c-track">
+        <div class="c-slide"><img src="frames/priscillasetio_oldmoney_t00.jpg" alt="t=0s"><div class="c-cap">t=0s · <strong>态度Hook</strong>："GAK PERLU KASIH TAU ORANG KM BANYAK DUIT"（不需要告诉别人你有钱）· 黑色西装开场</div></div>
+        <div class="c-slide"><img src="frames/priscillasetio_oldmoney_t01.jpg" alt="t=11s"><div class="c-cap">t=11s · <strong>产品入镜</strong>：手持 Leona 红瓶贴近颈部，银色手镯，自然光质感</div></div>
+        <div class="c-slide"><img src="frames/priscillasetio_oldmoney_t02.jpg" alt="t=23s"><div class="c-cap">t=23s · <strong>卖点具体化</strong>："香味传到别人鼻子里"——社交验证式持久力论证</div></div>
+        <div class="c-slide"><img src="frames/priscillasetio_oldmoney_t03.jpg" alt="t=34s"><div class="c-cap">t=34s · <strong>场景验证</strong>："第二天车里还闻得到"——用生活场景替代直接说"持久"</div></div>
+        <div class="c-slide"><img src="frames/priscillasetio_oldmoney_t04.jpg" alt="t=46s"><div class="c-cap">t=46s · <strong>香调收尾</strong>："bold, feminine"——两词精准定位产品人设</div></div>
+        <div class="c-slide"><img src="frames/priscillasetio_oldmoney_t05.jpg" alt="t=57s"><div class="c-cap">t=57s · 微笑+V手势+产品合影收尾，Bodibreze 标签清晰可见</div></div>
+      </div>
+      <button class="cbtn cbtn-r" onclick="sc('c1',1)">›</button>
+    </div>
+    <div class="hl-g">
+      <strong>标杆提炼<span class="en-block"><em> Key Takeaways</em></span>：</strong>
+      <ul style="padding-left:16px;font-size:.8rem;margin-top:6px;line-height:1.9">
+        <li><span class="zh-wrap"><strong>从不说"Girl Boss"</strong>——用"不需要告诉别人你有钱"把态度演出来</span><span class="en-block"> / Never says "Girl Boss" — attitude is performed, not declared</span></li>
+        <li><span class="zh-wrap"><strong>完整视觉语言</strong>：黑色西装+腕表+盘发，每一帧都在传递Old Money精致感</span><span class="en-block"> / Consistent visual system: suit + watch + updo reinforces the aesthetic every frame</span></li>
+        <li><span class="zh-wrap"><strong>卖点场景化</strong>："第二天车里还闻得到"比直接说"持久"说服力提升数倍</span><span class="en-block"> / Scene-anchored claims: "still smells in the car next day" far outperforms "long-lasting"</span></li>
+        <li><span class="zh-wrap"><strong>数据印证</strong>：CTR 1.78%（全场最高）× CVR 3.30% = ROI 5.60 的底层逻辑</span><span class="en-block"> / By the numbers: CTR 1.78% (campaign high) × CVR 3.30% = the mechanics of ROI 5.60</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Kintanumari Carousel -->
+  <div style="margin-bottom:20px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px">
+      <div><span style="background:var(--orange);color:#fff;padding:3px 10px;border-radius:10px;font-size:.72rem;font-weight:700">LOW ROI · 0.15</span>
+      <strong style="margin-left:8px">@kintanumari · PGC - Girl boss</strong></div>
+      <div style="font-size:.76rem;color:var(--muted)">小于10k · C级 · 花费$68 · GMV $10 · 2单
+      <br><a href="https://www.instagram.com/reel/DRRqVnpgaC0/" target="_blank" style="color:var(--blue)">🔗 instagram.com/reel/DRRqVnpgaC0</a></div>
+    </div>
+    <div class="carousel" id="c2">
+      <button class="cbtn cbtn-l" onclick="sc('c2',-1)">‹</button>
+      <div class="c-track">
+        <div class="c-slide"><img src="frames/kintanumari_girlboss_t00.jpg" alt="t=0s"><div class="c-cap">t=0s · <strong>穿搭方向正确</strong>：墨绿西装+水晶耳饰，但家居白墙背景削弱了职场感</div></div>
+        <div class="c-slide"><img src="frames/kintanumari_girlboss_t01.jpg" alt="t=8s"><div class="c-cap">t=8s · Hook"looking for a scent"（在找一款香）——通用需求，缺乏态度宣言</div></div>
+        <div class="c-slide"><img src="frames/kintanumari_girlboss_t02.jpg" alt="t=16s"><div class="c-cap">t=16s · 展示Leona瓶身，字幕"she got"，微笑面对镜头</div></div>
+        <div class="c-slide"><img src="frames/kintanumari_girlboss_t03.jpg" alt="t=24s"><div class="c-cap">t=24s · 香调信息图叠层"Bold, Sweet, Musky"+荔枝拼贴</div></div>
+        <div class="c-slide"><img src="frames/kintanumari_girlboss_t04.jpg" alt="t=32s"><div class="c-cap">t=32s · 侧脸微笑持瓶，持续香调信息展示</div></div>
+        <div class="c-slide"><img src="frames/kintanumari_girlboss_t05.jpg" alt="t=40s"><div class="c-cap">t=40s · 近距离微笑收尾，整体温和亲和而非"大女主"气场</div></div>
+      </div>
+      <button class="cbtn cbtn-r" onclick="sc('c2',1)">›</button>
+    </div>
+    <div class="hl-b">
+      <strong>可优化的3个点<span class="en-block"><em> 3 Areas to Strengthen</em></span>：</strong>
+      <ul style="padding-left:16px;font-size:.8rem;margin-top:6px;line-height:1.9">
+        <li><span class="zh-wrap"><strong>穿搭方向保留</strong>（西装+耳饰），Hook可以升级为态度宣言型，感染力更强</span><span class="en-block"> / Outfit direction is right; hook could carry more conviction — try an attitude declaration opener</span></li>
+        <li><span class="zh-wrap"><strong>场景升级</strong>：家居白墙可以换为都市街道/咖啡厅/办公环境，强化定位</span><span class="en-block"> / Scene upgrade: swap home wall for urban/café/office setting to reinforce positioning</span></li>
+        <li><span class="zh-wrap"><strong>KOL层级优化</strong>：Girl Boss人设内容需要受众对KOL有向往感，50k+更合适</span><span class="en-block"> / KOL tier: Girl Boss content needs aspirational credibility — 50k+ tier builds stronger pull</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Angiezeant -->
+  <div>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:8px">
+      <div><span style="background:var(--red);color:#fff;padding:3px 10px;border-radius:10px;font-size:.72rem;font-weight:700">ROI 0 · 优化空间</span>
+      <strong style="margin-left:8px">@angiezeant · PGC - Girlboss</strong></div>
+      <div style="font-size:.76rem;color:var(--muted)">10K-50k · C级 · 花费$5.98 · GMV $0
+      <br><a href="https://www.instagram.com/p/DSXWzj5kb-T/" target="_blank" style="color:var(--blue)">🔗 instagram.com/p/DSXWzj5kb-T</a></div>
+    </div>
+    <div class="carousel" id="c3">
+      <button class="cbtn cbtn-l" onclick="sc('c3',-1)">‹</button>
+      <div class="c-track">
+        <div class="c-slide"><img src="frames/angiezeant_girlboss_t00.jpg" alt="t=0s"><div class="c-cap">t=0s · <strong>文案方向好</strong>："this is what 'wanita sukses' smells like"——但紫色休闲上衣和家居背景削弱可信度</div></div>
+        <div class="c-slide"><img src="frames/angiezeant_girlboss_t01.jpg" alt="t=7s"><div class="c-cap">t=7s · 家居室内+植物背景，整体氛围偏"邻家女孩"而非"职场大女主"</div></div>
+        <div class="c-slide"><img src="frames/angiezeant_girlboss_t02.jpg" alt="t=14s"><div class="c-cap">t=14s · 插入调香师Nikolaj Koralewicz照片——品牌背书有意义但打断了叙事节奏</div></div>
+        <div class="c-slide"><img src="frames/angiezeant_girlboss_t04.jpg" alt="t=27s"><div class="c-cap">t=27s · 全程同一场景，无切换，视觉单调</div></div>
+        <div class="c-slide"><img src="frames/angiezeant_girlboss_t05.jpg" alt="t=34s"><div class="c-cap">t=34s · 结尾仍是家居环境，整体文案与画面风格存在落差</div></div>
+      </div>
+      <button class="cbtn cbtn-r" onclick="sc('c3',1)">›</button>
+    </div>
+    <div class="hl-r">
+      <strong>文案与画面的一致性<span class="en-block"><em> Copy-Visual Alignment</em></span>：</strong>
+      <span style="font-size:.81rem"><span class="zh-wrap">"wanita sukses smells like"方向有感染力，若画面同步呈现精致感穿搭与都市场景，整体说服力会更完整。</span><span class="en-block"><em>"wanita sukses smells like" is a strong hook. The opportunity lies in matching visuals to copy — polished styling and an aspirational setting would close the gap.</em></span></span>
+    </div>
+  </div>
+</div>
+
+<!-- ⑥ 最优脚本模板 -->
+<div class="section">
+  <h2 class="sec-title">六、最优脚本模板<span class="en">Optimal Script Templates</span></h2>
+  <p style="font-size:.78rem;color:var(--muted);margin-bottom:16px">基于高ROI素材提炼，每个模板附原帖链接。
+  <br><span class="en-block"><em>Derived from high-ROI materials. Each template links to the reference post.</em></span></p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+
+    <div class="tpl-card">
+      <div class="tpl-hdr" style="background:linear-gradient(90deg,#27ae60,#2ecc71)">
+        <div style="font-size:.68rem;opacity:.85">TEMPLATE 01 · ROI 5.60 · 最推荐 · Most Recommended</div>
+        <div style="font-size:1rem;font-weight:700">Old Money GRWM — 场景演绎式</div>
+        <div style="font-size:.68rem;opacity:.8;font-style:italic">Old Money GRWM — Scene-Driven Format</div>
+      </div>
+      <div class="tpl-body">
+        <span class="zh-wrap"><strong>参考：</strong>@priscillasetio · ROI 5.60<br>
+        <strong>KOL要求：</strong>100k-500k · 穿搭/lifestyle博主<br>
+        <strong>脚本结构：</strong><br>
+        &nbsp;[0-3s] 态度Hook（不提产品不提Girl Boss）<br>
+        &nbsp;[3-8s] 精致穿搭展示（西装/大衣）<br>
+        &nbsp;[8-13s] 优雅喷香+颈部/手腕特写<br>
+        &nbsp;[13-20s] 场景验证（持久力/社交认可）<br>
+        &nbsp;[20-25s] 收尾+CTA<br>
+        <strong>禁忌：</strong>不出现"Girl Boss"文字</span>
+        <span class="en-block"><em><strong>Ref:</strong> @priscillasetio · ROI 5.60<br>
+        <strong>KOL:</strong> 100k-500k · fashion/lifestyle<br>
+        <strong>Script:</strong> [0-3s] attitude hook (no product, no "Girl Boss") → [3-8s] polished outfit reveal → [8-13s] elegant spritz + close-up → [13-20s] scene validation → [20-25s] wrap + CTA<br>
+        <strong>Rule:</strong> Never show "Girl Boss" text</em></span>
+        <div style="margin-top:10px">
+          <a href="https://www.instagram.com/reel/DUf3KaSEnqK/" target="_blank" class="post-link" style="background:#e8f5e9;color:#27ae60;border:1px solid #a5d6a7">
+            📎 <span class="zh-wrap">查看原帖 @priscillasetio</span><span class="en-block">View Post @priscillasetio</span>
+          </a>
+        </div>
+        <div style="margin-top:8px;padding:6px 10px;background:rgba(39,174,96,.1);border-radius:6px;font-size:.75rem;font-weight:700;color:var(--green)">
+          <span class="zh-wrap">预期ROI 3.0–6.0 · 最高优先级</span><span class="en-block"> · Expected ROI 3.0–6.0 · Highest Priority</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tpl-card">
+      <div class="tpl-hdr" style="background:linear-gradient(90deg,#8e44ad,#9b59b6)">
+        <div style="font-size:.68rem;opacity:.85">TEMPLATE 02 · ROI 2.57 · 高推荐 · Highly Recommended</div>
+        <div style="font-size:1rem;font-weight:700">Mood + Perfume 情绪场景式</div>
+        <div style="font-size:.68rem;opacity:.8;font-style:italic">Mood & Perfume Scene Format</div>
+      </div>
+      <div class="tpl-body">
+        <span class="zh-wrap"><strong>参考：</strong>@itshella_ · ROI 2.57 · CVR 4.34%<br>
+        <strong>KOL要求：</strong>50k-100k · 生活质感强<br>
+        <strong>脚本结构：</strong><br>
+        &nbsp;[0-3s] 情绪画面Hook（无对白）<br>
+        &nbsp;[3-10s] 都市/咖啡厅/社交场景<br>
+        &nbsp;[10-18s] Leona 自然融入（喷香+感受）<br>
+        &nbsp;[18-25s] 情绪升华+CTA<br>
+        <strong>核心：</strong>情绪共鸣触发冲动购买</span>
+        <span class="en-block"><em><strong>Ref:</strong> @itshella_ · ROI 2.57 · CVR 4.34%<br>
+        <strong>KOL:</strong> 50k-100k · authentic lifestyle quality<br>
+        <strong>Script:</strong> [0-3s] mood visual hook (no voiceover) → [3-10s] urban/café/social scene → [10-18s] natural Leona integration → [18-25s] emotional lift + CTA<br>
+        <strong>Key:</strong> emotional resonance triggers impulse purchase</em></span>
+        <div style="margin-top:10px">
+          <a href="https://www.instagram.com/p/DS1G8hbD1X9/" target="_blank" class="post-link" style="background:#f3e5f5;color:#8e44ad;border:1px solid #ce93d8">
+            📎 <span class="zh-wrap">查看原帖 @itshella_</span><span class="en-block">View Post @itshella_</span>
+          </a>
+        </div>
+        <div style="margin-top:8px;padding:6px 10px;background:rgba(142,68,173,.1);border-radius:6px;font-size:.75rem;font-weight:700;color:var(--purple)">
+          <span class="zh-wrap">预期ROI 1.5–3.0 · CVR最高潜力</span><span class="en-block"> · Expected ROI 1.5–3.0 · Highest CVR Potential</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tpl-card">
+      <div class="tpl-hdr" style="background:linear-gradient(90deg,#2980b9,#3498db)">
+        <div style="font-size:.68rem;opacity:.85">TEMPLATE 03 · ROI 1.31 · 推荐 · Recommended</div>
+        <div style="font-size:1rem;font-weight:700">Top N 排名推荐式</div>
+        <div style="font-size:.68rem;opacity:.8;font-style:italic">Top-N Ranked Recommendation Format</div>
+      </div>
+      <div class="tpl-body">
+        <span class="zh-wrap"><strong>参考：</strong>@astaririri · ROI 1.31 · 500k-1M<br>
+        <strong>KOL要求：</strong>100k-500k · 有推荐权威性<br>
+        <strong>脚本结构：</strong><br>
+        &nbsp;[0-3s] "自信女生的Top 2好物" Hook<br>
+        &nbsp;[3-8s] 分屏/多产品，制造悬念<br>
+        &nbsp;[8-18s] 逐一介绍（Leona为主角）<br>
+        &nbsp;[18-25s] 真实使用感收尾<br>
+        <strong>关键：</strong>Girl Boss 隐含在"自信女生好物"中</span>
+        <span class="en-block"><em><strong>Ref:</strong> @astaririri · ROI 1.31 · 500k-1M<br>
+        <strong>KOL:</strong> 100k-500k · recommendation authority<br>
+        <strong>Script:</strong> [0-3s] "confident woman's Top 2" hook → [3-8s] split-screen multi-product → [8-18s] individual review (Leona as star) → [18-25s] authentic wrap<br>
+        <strong>Key:</strong> Girl Boss is implied by the curation, not stated</em></span>
+        <div style="margin-top:10px">
+          <a href="https://www.instagram.com/p/DPBS6skEk6u/" target="_blank" class="post-link" style="background:#e3f2fd;color:#2980b9;border:1px solid #90caf9">
+            📎 <span class="zh-wrap">查看原帖 @astaririri</span><span class="en-block">View Post @astaririri</span>
+          </a>
+        </div>
+        <div style="margin-top:8px;padding:6px 10px;background:rgba(41,128,185,.1);border-radius:6px;font-size:.75rem;font-weight:700;color:var(--blue)">
+          <span class="zh-wrap">预期ROI 1.0–2.0 · 权威感强</span><span class="en-block"> · Expected ROI 1.0–2.0 · Authority-Driven</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tpl-card">
+      <div class="tpl-hdr" style="background:linear-gradient(90deg,#e67e22,#f39c12)">
+        <div style="font-size:.68rem;opacity:.85">TEMPLATE 04 · 待测试 · Test Candidate</div>
+        <div style="font-size:1rem;font-weight:700">Day-to-Night 职场转场式</div>
+        <div style="font-size:.68rem;opacity:.8;font-style:italic">Office-to-Night Transition Format</div>
+      </div>
+      <div class="tpl-body">
+        <span class="zh-wrap"><strong>参考逻辑：</strong>基于@astaririri分屏+Old Money态度融合<br>
+        <strong>KOL要求：</strong>50k-500k · 都市白领形象<br>
+        <strong>脚本结构：</strong><br>
+        &nbsp;[0-3s] 白天办公室 look<br>
+        &nbsp;[3-6s] 喷 Leona = 切换信号<br>
+        &nbsp;[6-12s] 转场特效 → 华丽夜间 look<br>
+        &nbsp;[12-20s] 派对/约会出发<br>
+        <strong>文案：</strong>"From desk to dinner — one spray"</span>
+        <span class="en-block"><em><strong>Based on:</strong> @astaririri split-screen + Old Money attitude<br>
+        <strong>KOL:</strong> 50k-500k · urban professional image<br>
+        <strong>Script:</strong> [0-3s] office look → [3-6s] Leona spritz as transition signal → [6-12s] effect transition to evening look → [12-20s] heading out for dinner/party<br>
+        <strong>Copy:</strong> "From desk to dinner — one spray"</em></span>
+        <div style="margin-top:8px;padding:6px 10px;background:rgba(230,126,34,.1);border-radius:6px;font-size:.75rem;font-weight:700;color:var(--orange)">
+          <span class="zh-wrap">预期ROI 1.5–2.5 · 建议先 A/B 测试</span><span class="en-block"> · Expected ROI 1.5–2.5 · A/B Test First</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ⑦ 投放效果归因 -->
+<div class="section">
+  <h2 class="sec-title">七、投放效果归因<span class="en">Campaign Attribution</span></h2>
+  <div class="grid2">
+    <div>
+      <div style="font-weight:700;margin-bottom:10px;font-size:.86rem">高花费素材复盘（花费&gt;$100，ROI&lt;0.5）
+      <br><span class="en-block" style="font-weight:400;font-style:italic;font-size:.76rem">High-spend materials review (spend&gt;$100, ROI&lt;0.5)</span></div>
+      <div style="overflow-x:auto">
+      <table class="tbl">
+        <thead><tr><th>KOL</th><th>层级</th><th>花费</th><th>ROI</th><th>主题</th><th>可参考方向</th></tr></thead>
+        <tbody>
+          <tr style="background:rgba(231,76,60,.07)">
+            <td>@lindseyls</td><td>100k-500k</td><td style="color:var(--red);font-weight:700">$1,050</td><td style="color:var(--red)">0.28</td><td>UGC - Trendy Content</td>
+            <td style="font-size:.73rem"><span class="zh-wrap">CTR 0.11%，趋势内容受众与香水购买兴趣存在偏差</span><span class="en-block"><em>CTR 0.11%; trend audience has lower fragrance purchase intent</em></span></td>
+          </tr>
+          <tr style="background:rgba(231,76,60,.07)">
+            <td>@miseliaa</td><td>100k-500k</td><td style="color:var(--red);font-weight:700">$466</td><td style="color:var(--red)">0.08</td><td>UGC - Bebot Trend</td>
+            <td style="font-size:.73rem"><span class="zh-wrap">展示量达1510万，CVR仅0.01%，吸引力与转化之间落差明显</span><span class="en-block"><em>15M impressions, CVR 0.01% — high awareness, near-zero purchase intent</em></span></td>
+          </tr>
+          <tr style="background:rgba(231,76,60,.07)">
+            <td>@nadyaaisha</td><td>100k-500k</td><td style="color:var(--orange)">$185</td><td style="color:var(--red)">0.04</td><td>Beauty Vertical - PGC Outfit Tap</td>
+            <td style="font-size:.73rem"><span class="zh-wrap">穿搭美妆受众对香水购买意向相对偏低</span><span class="en-block"><em>Fashion/beauty audience has lower fragrance purchase alignment</em></span></td>
+          </tr>
+          <tr style="background:rgba(231,76,60,.07)">
+            <td>@ginaptd</td><td>10K-50k</td><td style="color:var(--orange)">$179</td><td style="color:var(--orange)">0.28</td><td>UGC - Transition</td>
+            <td style="font-size:.73rem"><span class="zh-wrap">转场特效内容曝光量大，但转化路径相对偏长</span><span class="en-block"><em>Transition content drives reach, but longer path to conversion</em></span></td>
+          </tr>
+          <tr style="background:rgba(231,76,60,.07)">
+            <td>@taniaanglt</td><td>500k-1M</td><td style="color:var(--orange)">$171</td><td style="color:var(--red)">0.06</td><td>PGC - Morning after wedding</td>
+            <td style="font-size:.73rem"><span class="zh-wrap">婚礼晨间场景与香水受众重合度偏低，场景定位有优化空间</span><span class="en-block"><em>Wedding morning audience overlaps less with fragrance buyers</em></span></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </div>
+    <div>
+      <div style="font-weight:700;margin-bottom:10px;font-size:.86rem">值得关注的规律
+      <br><span class="en-block" style="font-weight:400;font-style:italic;font-size:.76rem">Patterns Worth Noting</span></div>
+      <div class="hl-r">
+        <strong>1. 趋势跟风内容的转化路径<span class="en-block"><em> Trend Content Conversion Path</em></span></strong>
+        <p style="font-size:.79rem;margin-top:4px"><span class="zh-wrap">Bebot/趋势型内容合计花费逾$1,500，ROI均在0.30以下。展示量和点击量通常不低，但受众的香水购买兴趣相对有限，转化路径整体偏长。</span><span class="en-block"><em>Trend-following content: $1,500+ spend, all ROI below 0.30. Reach and clicks are decent, but audience fragrance purchase intent is lower — conversion takes longer to materialize.</em></span></p>
+      </div>
+      <div class="hl-r" style="margin-top:8px">
+        <strong>2. 场景与受众兴趣的匹配度<span class="en-block"><em> Scene-Audience Alignment</em></span></strong>
+        <p style="font-size:.79rem;margin-top:4px"><span class="zh-wrap">美妆/穿搭/婚礼场景的内容，吸引的主要是该兴趣人群，对香水的购买意向相对偏低。内容场景的选择在一定程度上决定了触达受众的购买倾向。</span><span class="en-block"><em>Beauty/fashion/wedding content naturally attracts audiences with different purchasing priorities. Scene type shapes who engages — worth aligning more closely with fragrance purchase intent.</em></span></p>
+      </div>
+      <div class="hl-r" style="margin-top:8px">
+        <strong>3. 预算集中度与转化效率<span class="en-block"><em> Budget Concentration vs. Efficiency</em></span></strong>
+        <p style="font-size:.79rem;margin-top:4px"><span class="zh-wrap">前3条内容花费$863（8.7%），产生GMV $2,603（51.1%）；其余212条花费$9,045，产生GMV $2,489。集中投放在验证过的内容形式，比广泛分散更容易产生规模化效果。</span><span class="en-block"><em>Top 3: $863 spend (8.7%) → $2,603 GMV (51.1%). Remaining 212: $9,045 → $2,489. Concentrating budget on validated formats outperforms broad diversification at this scale.</em></span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 附录 -->
+<div class="section" style="background:#f8f9fa;border:1px solid var(--border)">
+  <h2 class="sec-title">附录：分析方法说明<span class="en">Appendix: Methodology</span></h2>
+  <div class="grid2" style="font-size:.78rem;color:var(--muted);line-height:1.7">
+    <div>
+      <strong style="color:var(--text)">数据来源<span class="en-block"><em> Data Source</em></span></strong><br>
+      <span class="zh-wrap">红色香水leona.csv · 全量220行 · 有效投放215条（spend&gt;0）· 口径：按素材汇总（全生命周期总花费）</span><span class="en-block"><em>红色香水leona.csv · 220 rows total · 215 active (spend&gt;0) · Lifetime-spend-per-material format</em></span><br><br>
+      <strong style="color:var(--text)">ROI计算<span class="en-block"><em> ROI Calculation</em></span></strong><br>
+      <span class="zh-wrap">ROI = GMV ÷ spend（已逐条验证与字段值一致，误差&lt;0.01）</span><span class="en-block"><em>ROI = GMV ÷ spend, field-verified across all rows (error &lt;0.01)</em></span><br><br>
+      <strong style="color:var(--text)">KOL层级来源<span class="en-block"><em> KOL Tier Source</em></span></strong><br>
+      <span class="zh-wrap">优先从原始CSV（IG已投放内容-Leona.csv）的"达人量级"字段获取，缺失时从素材下载URL正则提取，覆盖213/215条。</span><span class="en-block"><em>Tier sourced from "达人量级" in original CSV; URL regex as fallback. Covers 213/215 entries.</em></span>
+    </div>
+    <div>
+      <strong style="color:var(--text)">Girl Boss识别<span class="en-block"><em> Girl Boss Detection</em></span></strong><br>
+      <span class="zh-wrap">通过脚本名称关键词匹配："girl boss"/"girlboss"/"old money"/"old money perfume"/"girlboss perfume"，共识别9条。</span><span class="en-block"><em>Keyword match on script_name field: "girl boss"/"girlboss"/"old money"/"old money perfume"/"girlboss perfume" → 9 entries.</em></span><br><br>
+      <strong style="color:var(--text)">注意事项<span class="en-block"><em> Important Notes</em></span></strong><br>
+      <span class="zh-wrap">1. 多数主题 n=1，无统计显著性，仅供方向参考<br>2. 评级（S/A/B/C）与ROI呈负相关，不建议以评级为主要投放依据<br>3. 视频帧描述严格基于实际画面内容</span><span class="en-block"><em>1. Most themes n=1 — directional only, not statistically conclusive<br>2. Grade inversely correlates with ROI — don't use grade as primary buying signal<br>3. Frame descriptions are strictly based on actual visual content</em></span>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div style="text-align:center;padding:36px 20px;color:var(--muted);font-size:.74rem;border-top:1px solid #eee;margin-top:20px">
+  <div style="font-size:.92rem;font-weight:600;color:var(--text);margin-bottom:6px">Bodibreze Leona (红色香水01) · IG投放内容分析报告 v2.0</div>
+  <div>215条有效投放 · 全量分析 · $9,908 Total Spend · ROI 0.514 · Girl Boss人设深拆</div>
+  <div style="margin-top:4px">Generated 2026-04 · Data 2025 Q3 – 2026 Q1 · Platform Instagram Indonesia</div>
+  <div style="margin-top:6px;font-size:.7rem;color:#bbb">基于 content-analysis-idea skill 工作流生成 · Powered by content-analysis-idea skill</div>
+</div>
+
+<script>
+function wrapChineseNodes(){
+  document.querySelectorAll('.en-block').forEach(function(eb){
+    var parent=eb.parentNode;
+    if(!parent||parent.querySelector('.zh-wrap'))return;
+    var toWrap=[],node=eb.previousSibling;
+    while(node){toWrap.unshift(node);node=node.previousSibling;}
+    var hasContent=toWrap.some(function(n){return n.nodeType===3?n.textContent.trim().length>0:true;});
+    if(toWrap.length&&hasContent){
+      var wrap=document.createElement('span');
+      wrap.className='zh-wrap';
+      parent.insertBefore(wrap,toWrap[0]);
+      toWrap.forEach(function(n){wrap.appendChild(n);});
+    }
+  });
+}
+function setLang(lang){
+  document.body.classList.remove('zh-mode','en-mode');
+  document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.remove('active');});
+  var m={zh:'btn-zh',bi:'btn-bi',en:'btn-en'};
+  if(m[lang])document.getElementById(m[lang]).classList.add('active');
+  if(lang==='zh')document.body.classList.add('zh-mode');
+  if(lang==='en')document.body.classList.add('en-mode');
+}
+function sc(id,dir){
+  var t=document.querySelector('#'+id+' .c-track');
+  if(t)t.scrollBy({left:dir*380,behavior:'smooth'});
+}
+window.addEventListener('DOMContentLoaded',function(){
+  wrapChineseNodes();
+  setLang('zh');
+  // Animate sections
+  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';}});},{threshold:.08});
+  document.querySelectorAll('.section').forEach(function(s){s.style.opacity='0';s.style.transform='translateY(16px)';s.style.transition='opacity .5s,transform .5s';io.observe(s);});
+  // Animate bars
+  document.querySelectorAll('.bar-fill').forEach(function(b){var w=b.style.width;b.style.width='0';setTimeout(function(){b.style.width=w;},500);});
+  // Touch carousels
+  document.querySelectorAll('.c-track').forEach(function(t){
+    var x=0;
+    t.addEventListener('touchstart',function(e){x=e.touches[0].clientX;},{passive:true});
+    t.addEventListener('touchend',function(e){var d=x-e.changedTouches[0].clientX;if(Math.abs(d)>40)t.scrollBy({left:d>0?380:-380,behavior:'smooth'});},{passive:true});
+  });
+});
+</script>
+</body>
+</html>
